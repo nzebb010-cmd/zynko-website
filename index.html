@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZYNKO — Community-Driven Meme Token</title>
+  <meta name="description" content="Meet ZYNKO, a community-driven meme token built on the Solana blockchain.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="https://arweave.net/nyoNZ0FWq0c6ei7oPYpQW3RH1SOZkzGzbVzPc1mnRt0" alt="ZYNKO logo">
+    <span>ZYNKO</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">BUILT ON SOLANA</p>
+      <h1>Meet <span>ZYNKO.</span></h1>
+      <p class="intro">A community-driven meme token built on the Solana blockchain. A global community, one token, and a shared journey.</p>
+      <a class="button" href="#about">Discover ZYNKO</a>
+      <p class="notice">Currently a Devnet project — not available for public trading.</p>
+    </section>
+
+    <section id="about">
+      <h2>About ZYNKO</h2>
+      <p>ZYNKO is a community-driven meme token. Our focus is on building the project openly, growing a global community, and developing the project step by step.</p>
+    </section>
+
+    <section>
+      <h2>Token details</h2>
+      <div class="details">
+        <div><strong>Token</strong><span>ZYNKO</span></div>
+        <div><strong>Blockchain</strong><span>Solana</span></div>
+        <div><strong>Total supply</strong><span>1,000,000,000</span></div>
+        <div><strong>Decimals</strong><span>9</span></div>
+        <div><strong>Network status</strong><span>Devnet</span></div>
+      </div>
+    </section>
+
+
+    <section id="token-address">
+      <h2>Official ZYNKO Token Address</h2>
+      <p>Solana Devnet mint address:</p>
+      <div class="token-address">
+        <code id="mint-address">DGZe25dN97Xxt8fN2BK5T7if4XGzyYyL8zTcqAwskfc</code>
+        <button type="button" id="copy-button">Copy address</button>
+      </div>
+      <p id="copy-status" aria-live="polite"></p>
+
+      <p style="margin-top:18px;">
+        <a class="button"
+           href="https://explorer.solana.com/address/DGZe25dN97Xxt8fN2BK5T7if4XGzyYyL8zTcqAwskfc?cluster=devnet"
+           target="_blank"
+           rel="noopener noreferrer">
+          View on Solana Explorer
+        </a>
+      </p>
+
+    </section>
+
+
+    <section id="allocation">
+      <h2>ZYNKO Token Allocation</h2>
+      <p>Total supply: 1,000,000,000 ZYNKO</p>
+      <div class="details">
+        <div><strong>Reserve — 70%</strong><span>700,000,000 ZYNKO</span></div>
+        <div><strong>Community — 15%</strong><span>150,000,000 ZYNKO</span></div>
+        <div><strong>Treasury — 10%</strong><span>100,000,000 ZYNKO</span></div>
+        <div><strong>Team — 5%</strong><span>50,000,000 ZYNKO</span></div>
+      </div>
+      <p>Allocation information is provided for transparency. The reserve is held in the main wallet and is not currently deposited in a liquidity pool.</p>
+    </section>
+
+    <section>
+      <h2>Our vision</h2>
+      <p>Build a welcoming global community around ZYNKO, with transparency, creativity, and steady development at the centre.</p>
+    </section>
+
+    <section class="warning">
+      <h2>Important notice</h2>
+      <p>ZYNKO is currently on Solana Devnet. Devnet tokens have no real monetary value. This project does not promise profits or investment returns.</p>
+    </section>
+  </main>
+
+  <footer>© 2026 ZYNKO. Built for the community.</footer>
+
+  <script>
+    document.getElementById("copy-button").addEventListener("click", async () => {
+      const address = document.getElementById("mint-address").textContent;
+      try {
+        await navigator.clipboard.writeText(address);
+        document.getElementById("copy-status").textContent = "Address copied!";
+      } catch {
+        document.getElementById("copy-status").textContent = "Please copy the address manually.";
+      }
+    });
+  </script>
+
+</body>
+</html>
